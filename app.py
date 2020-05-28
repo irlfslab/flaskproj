@@ -40,9 +40,7 @@ def process():
     name_invalid=False
     phone_invalid=False
     
-    if firstname=="" or lastname=="" or email=="" or phone =="" or not cakes:
-        print("All input fields are required!")
-        print("field_is_empty: ",field_is_empty)
+    if not cakes:
         return render_template('order.html',field_is_empty=True, f_name=firstname, l_name=lastname, email=email, phone=phone)
     
     if not firstname.isalpha() or not lastname.isalpha():
