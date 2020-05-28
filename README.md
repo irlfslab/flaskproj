@@ -23,6 +23,7 @@ Users of the website would be the fans for fresh bread and cakes. The informatio
 - #### Javascript
 - #### JSON 
 - #### Python
+- #### Flask
 <br>
 
 ## Testing
