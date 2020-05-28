@@ -48,4 +48,4 @@ Form fields and all links were manually tested.  All external links include "tar
 <br>
 
 ## Credits
-- The photos used in this site are from [unplash](https://unsplash.com).
+- The photos used in this site are from [unsplash](https://unsplash.com).
