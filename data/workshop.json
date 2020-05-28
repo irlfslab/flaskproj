@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Baking Basics I",
+        "day":"Monday",
+        "time": "11:00am"
+    },
+    {   "name": "Cake Decorating I",
+        "day":"Thursday",
+        "time": "11:00am"
+    }
+]

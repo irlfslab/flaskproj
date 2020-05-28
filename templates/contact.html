@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}
+    {% if title %}
+        {{ title }}
+    {% else %}
+        Fresh Bakery
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid callout-container2 bkg">
+        <div class="opaque-overlay">&nbsp;</div>
+        <div class="row">
+            <div class="col-12">
+                <section class="callout jumbotron text-center">
+                    <p class="h1">Contact us</p>
+                </section>
+            </div>
+        </div>
+    </div>
+     
+        <h3 class="display-5">Baking Workshop Schedule</h3>
+        
+        {% for session in workshop %}
+        <div class="schedule">
+          <p>Name: <strong> {{session.name}} </strong></p>
+          <p>Date: {{session.day}}</p>
+          <p>Time: {{session.time}}</p>
+        </div>
+        {% endfor %}
+        <hr>
+    <div class="box">
+        <div class="row">
+            <div class="srvhours col col-lg-5">
+                <p class="h3"><strong>Contact us</strong></p>
+                <br>
+                <p><strong>Address:</strong> 220 Yonge Street</p>
+                <p><strong>Email  :</strong> info@freshbakery.com</p>
+                <p><strong>Phone  :</strong> (123)456-7890</p>
+                <br>
+                <p class="h3"><strong>Business Hours</strong></p>
+                <br>
+                <p><strong>Mon - Sat: </strong>9:00am - 6:00pm</p>
+                <p><strong>Sun      :</strong>11:00pm - 6:00pm</p>
+            </div>
+
+            <div class = "col-lg-5 mapbox"> 
+                <iframe class="resp-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.716408905905!2d-79.38288528511946!3d43.65406826039368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34cb507beb01%3A0x1f79ee643fed4f0c!2s220%20Yonge%20St%2C%20Toronto%2C%20ON%20M5B%202L7!5e0!3m2!1sen!2sca!4v1589824787820!5m2!1sen!2sca" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+            </div> 
+        </div>
+    </div>
+    {% endblock %}
+  

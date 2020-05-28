@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block title %}
+    {% if title %}
+        {{ title }}
+    {% else %}
+        Fresh Bakery
+    {% endif %}
+{% endblock %}
+{% block content %}
+<div class="container-fluid callout-container1 bkg">
+    <div class="opaque-overlay">&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron text-center">
+                <p class="h1">Delicious cakes</p>
+                <br>
+                <p class="h2">We offer custom cakes</p>
+            </section>
+        </div>
+    </div>  
+</div>
+
+<div class="fmdesc">
+    <p class='h3 fmhead'>Online Order</p>
+    <br>
+    <p class='h4'>Please use the online form to place your cake order inquiry.</p>
+</div>
+
+<div class="orderfm">
+    <form  method="POST" action="process">
+    {% if field_is_empty %}
+        <div class="alert alert-danger" role="alert">
+            Please be advised that the following field is required:
+            <ul>
+                <li>Order Items</li>
+            </ul>
+        </div>
+    {% endif %}
+    {% if name_invalid %}
+        <div class="alert alert-danger" role="alert">
+            First Name and Last Name must be alphabetic.
+        </div>
+    {% endif %}
+    {% if phone_invalid %}
+        <div class="alert alert-danger" role="alert">
+            Phone Number must be 10 digits.
+        </div>
+    {% endif %}    
+      
+        <div class="row">
+            <div class="col-25">
+              <label for="fname">First Name *</label>
+            </div>
+            <div class="col-35">
+              <input type="text" id="fname" name="firstname" maxlength="20" required placeholder="Your name.." value="{{ f_name }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+              <label for="lname">Last Name *</label>
+            </div>
+            <div class="col-35">
+              <input type="text" id="lname" name="lastname" maxlength="20" required placeholder="Your last name.." value="{{ l_name }}">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+                <label for="phone">Phone *</label>
+            </div>
+            <div class="col-35">
+                <input type="tel" id="phone" name="phone" maxlength="10" required placeholder="9999999999" value="{{ phone }}">
+            </div>
+        </div>    
+
+        <div class="row">
+              <div class="col-25">
+                <label for="email">Email *</label>
+              </div>
+              <div class="col-35">
+                <input class="other-type" type="email" id="email" name="email" maxlength="30" required placeholder="Your email address.." value="{{ email }}">
+              </div>
+        </div>
+        <br/>
+        
+        <div class="row">
+            <div class="col-25">
+              <label for="cake">Order Items *</label>
+            </div>
+            <div class="col-35 form-check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Fruit cake" id="fruitcake" name="cakes">
+                    <label class="form-check-label" for="fruitcake">
+                         Fruit Cake
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+            </div>
+             <div class="col-35 form-check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Butter cake" id="butercake" name="cakes">
+                    <label class="form-check-label" for="buttercake">
+                        Butter Cake
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-35 form-check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Pound cake" id="poundcake" name="cakes">
+                    <label class="form-check-label" for="poundcake">
+                        Pound Cake
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-35 form-check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Mousse cake" id="moussecake" name="cakes">
+                    <label class="form-check-label" for="moussecake">
+                        Mousse Cake
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-35 form-check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Cheese cake" id="cheesecake" name="cakes">
+                    <label class="form-check-label" for="cheesecake">
+                        Cheese Cake
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-35 form-check">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="Angel food cake" id="angelcake" name="cakes">
+                    <label class="form-check-label" for="angelcake">
+                        Angel Food Cake
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-25">
+              <label for="pickday">Pickup day</label>
+            </div>
+            
+            <div class="col-35">
+              <select class="form-control" id="pickday" name="pickday">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+              </select>
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="col-25">
+              <label for="fmsg">Message *</label>
+            </div>
+            <div class="col-35">
+              <textarea rows="5" class="form-control" placeholder="Message" name="fmsg" id="fmsg" required></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-35">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+<!-- calling the template base.html file -->
+{% extends 'base.html' %}
+
+{% block title %}
+{% if title %}
+{{ title }}
+{% else %}
+Order success
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="alert alert-success succeed" role="alert">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Dear {{ f_name }},</p>
+    <p>Thank you for your order.</p>
+    <p>You can find your order request below.</p>
+    <br/>
+    <p>Cake order</p>
+    <ul>
+      {% for cake in cakes: %}
+        <li>{{ cake }}</li>
+      {% endfor %}
+    </ul>
+    <p>The pickup day is preferred on {{ pickday }}. Message '{{ fmsg }}' is noted.</p>
+    <p>Our representative will confirm you detail within 24 hours through your email address '{{ email }}' or phone '{{ phone }}' as provided.</p>
+    <br>
+    <br>
+    <p>Fresh Bakery Team</p>
+    <br>
+</div>
+{% endblock %}

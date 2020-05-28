@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}
+    {% if title %}
+        {{ title }}
+    {% else %}
+        Fresh Bakery
+    {% endif %}
+{% endblock %}
+{% block content %}
+<div class="container-fluid callout-container bkg">
+    <div class="opaque-overlay">&nbsp;</div>
+    <div class="row">
+        <div class="col-12">
+            <section class="callout jumbotron text-center">
+                <p class="h1">Delicious bread and cakes</p>
+                <br>
+                <p class="h2">We offer varieties of bread and cakes</p>
+            </section>
+        </div>
+    </div>  
+</div>
+                    
+<div class="container-wrapper">
+    <div>
+        <div class="col-12 page-header">
+            <br>
+            <br/>
+            <p>Fresh Bakery is one of the bakeries for specialty breads as well as cakes and sweets.</p>
+            <p>Customers are welcome to experience our quality and freshness.</p>        
+         </div>
+     </div>  
+</div>
+
+<div class="container">
+    <section>
+     <div class="row">
+         <div class="col-12 my-5">
+             <h2 class="text-uppercase">Bread</h2>
+             <br>
+             <p class="h3 text-center">Our bread is made with natural ingredients</p>
+             <hr />
+         </div>
+     </div>
+
+     <div class="row">
+         <div class="col-12 col-md-6">       
+             ​<picture>
+               <img src="static/images/bread1.jpg" class="rounded img-fluid img-thumbnail" alt="bread image 1" height=350>
+             </picture>  
+             <br>
+         </div>
+
+         <div class="col-12 col-md-6">
+             ​<picture>
+               <img src="static/images/bread2.jpg" class="img-fluid img-thumbnail" alt="bread image 2" height=350>
+             </picture>
+         </div>  
+     </div>
+     <div class="row">
+       <div class="col-12 my-5">
+           <h2 class="text-uppercase">Cakes and sweets</h2>
+           <br>
+           <p class="h3 text-center">Enjoy from fresh baked sweets to delicious cakes</p>
+           <hr />
+       </div>
+   </div>
+
+   <div class="row">
+       <div class="col-12 col-md-6">
+           <div class="media">
+               ​<picture>
+                   <img src="static/images/cake1.jpg" class="rounded img-fluid img-thumbnail" alt="cake image 1" height=350>
+               </picture>
+               <br>               
+           </div>
+           <br>
+       </div>
+       <div class="col-12 col-md-6">
+           <div class="media">
+              <picture>
+               <img src="static/images/cake2.jpg" class="rounded img-fluid img-thumbnail" alt="cake image 2" height=350>
+              </picture>     
+           </div>
+       </div>
+   </div>
+ </section>
+</div>
+{% endblock %}
