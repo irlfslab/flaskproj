@@ -45,14 +45,14 @@
      <div class="row">
          <div class="col-12 col-md-6">       
              ​<picture>
-               <img src="static/images/bread1.jpg" class="rounded img-fluid img-thumbnail" alt="bread image 1" height=350>
+                <img src="{{ url_for ('static',filename='images/bread1.jpg') }}" class="img-fluid img-thumbnail" alt="bread image 1" height=350>  
              </picture>  
              <br>
          </div>
 
          <div class="col-12 col-md-6">
              ​<picture>
-               <img src="static/images/bread2.jpg" class="img-fluid img-thumbnail" alt="bread image 2" height=350>
+               <img src="{{ url_for ('static',filename='images/bread2.jpg') }}" class="img-fluid img-thumbnail" alt="bread image 2" height=350>  
              </picture>
          </div>  
      </div>
@@ -69,7 +69,7 @@
        <div class="col-12 col-md-6">
            <div class="media">
                ​<picture>
-                   <img src="static/images/cake1.jpg" class="rounded img-fluid img-thumbnail" alt="cake image 1" height=350>
+                  <img src="{{ url_for ('static',filename='images/cake1.jpg') }}" class="img-fluid img-thumbnail" alt="cake image 1" height=350>  
                </picture>
                <br>               
            </div>
@@ -78,7 +78,7 @@
        <div class="col-12 col-md-6">
            <div class="media">
               <picture>
-               <img src="static/images/cake2.jpg" class="rounded img-fluid img-thumbnail" alt="cake image 2" height=350>
+               <img src="{{ url_for ('static',filename='images/cake2.jpg') }}" class="img-fluid img-thumbnail" alt="cake image 2" height=350>  
               </picture>     
            </div>
        </div>
