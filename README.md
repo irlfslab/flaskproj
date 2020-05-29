@@ -8,7 +8,7 @@ Users of the website would be the fans for fresh bread and cakes. The informatio
 
 ## Features
 - On the homepage, the photos briefly introduce what products the bakery shop offer.<br>
-- User can order cake on online order page. The form fields are validated through python.<br>
+- User can order cake on online order page.<br>
 - The workshop schedule and contact information can be found on contact us page. <br>
 
 
