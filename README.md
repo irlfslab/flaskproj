@@ -27,7 +27,7 @@ Users of the website would be the fans for fresh bread and cakes. The informatio
 <br>
 
 ## Testing
-Form fields and all links were manually tested.  All external links include "target=_blank" so the user can stay on the page by navigating to a external resource.  The project can be run at [Flask project](https://freshbakery.herokuapp.com).
+Form fields and all links were manually tested.  All external links include "target=_blank" so the user can stay on the page by navigating to a external resource.  The website can be tested at [Flask project](https://freshbakery.herokuapp.com).
 
 
 <br>
